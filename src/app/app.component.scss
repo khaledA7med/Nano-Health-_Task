@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.container-fluid {
+  min-height: 100vh;
+  height: auto;
+  background-image: url("../assets/bg-intro-desktop.png");
+  background-color: hsl(0, 100%, 74%);
+  font-size: 16px;
+  h1 {
+    font-size: 48px;
+    font-weight: 900;
+  }
+  .poppins-thin {
+    font-family: "Poppins", serif;
+  }
+
+  .register_form {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    .content {
+      .offer {
+        font-weight: 700;
+        border-radius: 10px;
+        background-color: hsl(248, 32%, 49%);
+        box-shadow: 5px 5px #00000032;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        .offer-muted {
+          color: #ffffffe5;
+          font-weight: 400;
+        }
+      }
+      form {
+        background-color: #fff;
+        box-shadow: 5px 5px #00000032;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        button {
+          background-color: hsl(154, 59%, 51%);
+          color: #fff;
+          box-shadow: 5px 5px #00000032;
+          &:hover {
+            background-color: hsl(154, 59%, 40%);
+          }
+        }
+        .terms {
+          color: hsl(246, 25%, 77%);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+<div class="container-fluid d-flex justify-content-center">
+    <div class="row py-5">
+        <div class="desc col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+            <div class="content text-white text-sm-center text-lg-start">
+                <h1>
+                    Learn to code by <br> watching others
+                </h1>
+                <p>
+                    see how experienced developers solve problems in real-time. <br>
+                    Watching scripted tutorials is great, but understanding how <br> developers thimk is invaluable.
+                </p>
+
+            </div>
+        </div>
+        <div class="register_form col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+            <div class="content text-center row d-flex justify-content-center">
+                <div class="offer py-3 w-75 text-white text-center">Try it free 7 days <span class="offer-muted">then
+                        $20/mo.
+                        thereafter</span></div>
+                <div class="d-flex justify-content-center">
+                    <form [formGroup]="registerForm" (ngSubmit)="submitForm()" class="p-3 mt-3 w-75">
+                        <div class="first_name mb-3">
+                            <input type="text" class="form-control form-control-lg" placeholder="First Name" [ngClass]="{
+                                'is-invalid':
+                                  (f.firstName.touched || submitted) &&
+                                  f.firstName.invalid
+                              }" formControlName="firstName">
+                            <div class="invalid-feedback text-start">
+                                First Name cannot br empty
+                            </div>
+                        </div>
+                        <div class="last_name my-3">
+                            <input type="text" class="form-control form-control-lg" placeholder="Last Name" [ngClass]="{
+                                'is-invalid':
+                                  (f.lastName.touched || submitted) &&
+                                  f.lastName.invalid
+                              }" formControlName="lastName">
+                            <div class="invalid-feedback text-start">
+                                Last Name cannot br empty
+                            </div>
+                        </div>
+                        <div class="email my-3">
+                            <input type="email" class="form-control form-control-lg" placeholder="Email Address"
+                                formControlName="email" [ngClass]="{
+                                    'is-invalid': (this.f.email.touched || submitted) && (this.f.email.hasError('required') || this.f.email.hasError('pattern'))
+                                  }">
+                            <div class="invalid-feedback text-start"
+                                *ngIf="(this.f.email.touched || submitted) && this.f.email.hasError('required')">
+                                Email cannot br empty
+                            </div>
+                            <div class="invalid-feedback text-start"
+                                *ngIf="(this.f.email.touched || submitted) && this.f.email.hasError('pattern')">
+                                Looks like this is not an email
+                            </div>
+                        </div>
+                        <div class="password my-3">
+                            <input type="password" class="form-control form-control-lg" placeholder="Password"
+                                [ngClass]="{
+                                'is-invalid':
+                                  (f.password.touched || submitted) &&
+                                  f.password.invalid
+                              }" formControlName="password">
+                            <div class="invalid-feedback text-start">
+                                Password cannot br empty
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-lg w-100 text-uppercase my-2">claim your free
+                            trial</button>
+                        <span class="terms">by clicking the button, you are agreeing to our <span
+                                class="text-danger">Terms
+                                and
+                                services</span></span>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
